@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <!-- Inherited Icy Parent POM -->
+    <parent>
+        <groupId>org.bioimageanalysis.icy</groupId>
+        <artifactId>pom-icy</artifactId>
+        <version>3.0.0</version>
+    </parent>
+
+    <!-- Project Information -->
+    <artifactId>kernel-extensions</artifactId>
+    <version>1.0.0</version>
+
+    <name>Kernel Extensions</name>
+    <description>Contains basics stuff for Icy</description>
+    <url></url>
+    <inceptionYear>2024</inceptionYear>
+
+    <organization>
+        <name>Institut Pasteur</name>
+        <url>https://pasteur.fr</url>
+    </organization>
+
+    <licenses>
+        <license>
+            <name>GNU GPLv3</name>
+            <url>https://www.gnu.org/licenses/gpl-3.0.en.html</url>
+            <distribution>repo</distribution>
+        </license>
+    </licenses>
+
+    <developers>
+        <developer>
+            <id>tmusset</id>
+            <name>Thomas Musset</name>
+            <url>https://research.pasteur.fr/fr/member/thomas-musset/</url>
+            <roles>
+                <role>founder</role>
+                <role>lead</role>
+                <role>architect</role>
+                <role>developer</role>
+                <role>debugger</role>
+                <role>tester</role>
+                <role>maintainer</role>
+                <role>support</role>
+            </roles>
+        </developer>
+    </developers>
+
+    <!--<properties>
+        <extension.authors>Thomas Musset,Stéphane Dallongeville</extension.authors>
+        <extension.tags>roi,kernel,canvas</extension.tags>
+    </properties>
+
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>org.codehaus.mojo</groupId>
+                <artifactId>properties-maven-plugin</artifactId>
+                <version>1.2.1</version>
+                <executions>
+                    <execution>
+                        <phase>generate-resources</phase>
+                        <goals>
+                            <goal>write-project-properties</goal>
+                        </goals>
+                        <configuration>
+                            <outputFile>${project.build.outputDirectory}/extension.properties</outputFile>
+                        </configuration>
+                    </execution>
+                </executions>
+            </plugin>
+        </plugins>
+    </build>-->
+
+    <!-- Icy Maven repository (to find parent POM) -->
+    <repositories>
+        <repository>
+            <id>icy</id>
+            <name>Icy's Nexus</name>
+            <url>https://icy-nexus.pasteur.fr/repository/Icy/</url>
+        </repository>
+    </repositories>
+</project>

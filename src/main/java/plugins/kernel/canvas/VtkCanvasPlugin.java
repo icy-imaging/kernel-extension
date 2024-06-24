@@ -1,0 +1,46 @@
+/*
+ * Copyright (c) 2010-2024. Institut Pasteur.
+ *
+ * This file is part of Icy.
+ * Icy is free software: you can redistribute it and/or modify
+ * it under the terms of the GNU General Public License as published by
+ * the Free Software Foundation, either version 3 of the License, or
+ * (at your option) any later version.
+ *
+ * Icy is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
+ * GNU General Public License for more details.
+ *
+ * You should have received a copy of the GNU General Public License
+ * along with Icy. If not, see <https://www.gnu.org/licenses/>.
+ */
+
+package plugins.kernel.canvas;
+
+import org.bioimageanalysis.icy.extension.plugin.abstract_.Plugin;
+import org.bioimageanalysis.icy.extension.plugin.annotation_.IcyPluginIcon;
+import org.bioimageanalysis.icy.extension.plugin.annotation_.IcyPluginName;
+import org.bioimageanalysis.icy.extension.plugin.interface_.PluginCanvas;
+import org.bioimageanalysis.icy.gui.canvas.VtkCanvas;
+import org.bioimageanalysis.icy.gui.viewer.Viewer;
+
+/**
+ * Plugin wrapper for VtkCanvas
+ *
+ * @author Stephane Dallongeville
+ * @author Thomas Musset
+ */
+@IcyPluginName("Canvas 3D")
+@IcyPluginIcon(path = "/extension/kernel/canvas/vtk_canvas.svg", monochrome = true)
+public class VtkCanvasPlugin extends Plugin implements PluginCanvas<VtkCanvas> {
+    @Override
+    public VtkCanvas createCanvas(final Viewer viewer) {
+        return new VtkCanvas(viewer);
+    }
+
+    @Override
+    public String getCanvasClassName() {
+        return VtkCanvas.class.getName();
+    }
+}
