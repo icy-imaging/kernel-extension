@@ -107,7 +107,7 @@ public class LocalPluginSearchResultProducer extends SearchResultProducer {
             if (hasWaitingSearch())
                 return;
 
-            ((LocalPluginResult) result).getPlugin().loadDescriptor();
+            //((LocalPluginResult) result).getPlugin().loadDescriptor();
             consumer.resultChanged(this, result);
         }
 

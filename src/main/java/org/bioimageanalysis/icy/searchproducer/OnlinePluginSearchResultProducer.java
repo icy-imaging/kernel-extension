@@ -56,7 +56,7 @@ public class OnlinePluginSearchResultProducer extends OnlineSearchResultProducer
             // can take sometime, better to execute it in background
             ThreadUtil.bgRun(() -> {
                 // plugin locally installed ? (result transfer to local plugin provider)
-                if (PluginLoader.isLoaded(plugin.getClassName())) {
+                /*if (PluginLoader.isLoaded(plugin.getClassName())) {
                     if (plugin.isActionable())
                         PluginLauncher.start(plugin);
                     else {
@@ -81,7 +81,7 @@ public class OnlinePluginSearchResultProducer extends OnlineSearchResultProducer
                             ThreadUtil.invokeLater(() -> new PluginDetailPanel(localPlugin));
                         }
                     }
-                }
+                }*/
             });
         }
     }
@@ -165,7 +165,7 @@ public class OnlinePluginSearchResultProducer extends OnlineSearchResultProducer
             if (hasWaitingSearch())
                 return;
 
-            ((OnlinePluginResult) result).getPlugin().loadDescriptor();
+            //((OnlinePluginResult) result).getPlugin().loadDescriptor();
             consumer.resultChanged(this, result);
         }
 
@@ -197,7 +197,7 @@ public class OnlinePluginSearchResultProducer extends OnlineSearchResultProducer
         final String text = XMLUtil.getElementValue(pluginNode, ID_TEXT, "");
         int priority;
 
-        final PluginDescriptor localPlugin = PluginLoader.getPlugin(className);
+        final PluginDescriptor localPlugin = null;//PluginLoader.getPlugin(className);
         // exists in local ?
         if (localPlugin != null) {
             // if we have the local search provider, we try to add result if not already existing
@@ -230,13 +230,13 @@ public class OnlinePluginSearchResultProducer extends OnlineSearchResultProducer
             return null;
         }
 
-        final PluginDescriptor onlinePlugin = PluginDescriptor.getPlugin(onlinePlugins, className);
+        final PluginDescriptor onlinePlugin = null;//PluginDescriptor.getPlugin(onlinePlugins, className);
         // cannot be found in online ? --> no result
         if (onlinePlugin == null)
             return null;
 
         // try to get priority on result
-        onlinePlugin.loadDescriptor();
+        //onlinePlugin.loadDescriptor();
         priority = LocalPluginSearchResultProducer.searchInPlugin(onlinePlugin, words, startWithOnly);
 
         // only keep high priority info from local data
