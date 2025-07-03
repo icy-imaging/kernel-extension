@@ -1,4 +1,4 @@
-# JOCL
+# Kernel Extension
 
 <!-- badges: start -->
 [![License: GPL v3](https://img.shields.io/badge/License-GPLv3-blue.svg)](https://www.gnu.org/licenses/gpl-3.0)
@@ -6,19 +6,13 @@
 [![Image.sc forum](https://img.shields.io/badge/discourse-forum-brightgreen.svg?style=flat)](https://forum.image.sc/tag/icy)
 <!-- badges: end -->
 
-This is the repository for the source code of *JOCL*, a plugin for the [bioimage analysis software Icy](http://icy.bioimageanalysis.org/), which was developed by members or former members of the [Biological Image Analysis unit at Institut Pasteur](https://research.pasteur.fr/en/team/bioimage-analysis/). This plugin is licensed under GPL3 license.     
+This is the repository for the source code of *Kernel Extension*, an extension for the [bioimage analysis software Icy](http://icy.bioimageanalysis.org/), which was developed by members or former members of the [Biological Image Analysis unit at Institut Pasteur](https://research.pasteur.fr/en/team/bioimage-analysis/). This plugin is licensed under GPL3 license.     
 Icy is developed and maintained by [Biological Image Analysis unit at Institut Pasteur](https://research.pasteur.fr/en/team/bioimage-analysis/). The [source code of Icy](https://gitlab.pasteur.fr/bia/icy) is also licensed under a GPL3 license.     
-
-
 
 ## Plugin description
 
 <!-- Short description of goals of package, with descriptive links to the documentation website --> 
-JogAmp JOCL library for Icy  
-**JogAmp JOCL web site**: https://jogamp.org/jocl/www/
-        
-A more detailed user documentation can be found on the JOCL documentation page on the Icy website: http://icy.bioimageanalysis.org/plugin/jogamp-jocl-library-for-icy/               
-
+Default extensions for Icy
 
 ## Installation instructions
 
@@ -28,12 +22,9 @@ For developers, see our [Contributing guidelines](https://gitlab.pasteur.fr/bia/
 
 <!--  Here we should have some explanations on how to fork this repo (for an example see https://gitlab.pasteur.fr/bia/wellPlateReader). Add any info related to Maven etc. How the project is build (for an example see https://gitlab.pasteur.fr/bia/wellPlateReader). Any additional setup required (authentication tokens, etc).  -->
 
-
 ## Main functions and usage
 
 <!-- list main functions, explain architecture, classname, give info on how to get started with the plugin. If applicable, how the package compares to other similar packages and/or how it relates to other packages -->
-
-Classname: `plugins.stef.library.JOCLPlugin`
 
 
 
@@ -51,6 +42,7 @@ http://icy.bioimageanalysis.org
 ## Author(s)      
 
 Stephane Dallongeville
+Thomas Musset
 
 
 ## Additional information
