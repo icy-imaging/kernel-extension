@@ -33,7 +33,7 @@ import org.jetbrains.annotations.NotNull;
  * @author Thomas Musset
  */
 @IcyPluginName("Polygon")
-@IcyPluginIcon(path = "/icy/extension/kernel/icons/roi/polygon.svg", monochrome = true)
+@IcyPluginIcon(value = "roi/polygon", monochrome = true)
 @IcyROIPlugin(type = ROIType.ROI2D, nbPoints = ROIPoints.INFINITE)
 public class ROI2DPolygonPlugin extends Plugin implements PluginROI {
     @Override

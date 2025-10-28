@@ -33,7 +33,7 @@ import org.jetbrains.annotations.NotNull;
  * @author Thomas Musset
  */
 @IcyPluginName("Ellipse")
-@IcyPluginIcon(path = "/icy/extension/kernel/icons/roi/ellipse.svg", monochrome = true)
+@IcyPluginIcon(value = "roi/ellipse", monochrome = true)
 @IcyROIPlugin(type = ROIType.ROI2D, nbPoints = ROIPoints.TWO)
 public class ROI2DEllipsePlugin extends Plugin implements PluginROI {
     @Override

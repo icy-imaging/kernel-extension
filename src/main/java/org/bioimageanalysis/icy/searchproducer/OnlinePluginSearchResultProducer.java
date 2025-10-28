@@ -175,7 +175,7 @@ public class OnlinePluginSearchResultProducer extends OnlineSearchResultProducer
             if (hasWaitingSearch())
                 return;
 
-            ((OnlinePluginResult) result).getPlugin().loadImages();
+            //((OnlinePluginResult) result).getPlugin().loadImages();
             consumer.resultChanged(this, result);
         }
     }

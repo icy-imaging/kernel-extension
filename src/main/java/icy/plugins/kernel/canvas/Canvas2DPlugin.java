@@ -30,7 +30,7 @@ import org.bioimageanalysis.icy.gui.viewer.Viewer;
  * @author Thomas Musset
  */
 @IcyPluginName("Canvas 2D")
-@IcyPluginIcon(path = "/icy/extension/kernel/icons/canvas/2d_canvas.svg", monochrome = true)
+@IcyPluginIcon(value = "canvas/2d_canvas", monochrome = true)
 public class Canvas2DPlugin extends Plugin implements PluginCanvas<Canvas2D> {
     @Override
     public String getCanvasClassName() {

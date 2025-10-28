@@ -60,8 +60,8 @@ public class ROIPropertyDescriptorsPlugin extends Plugin implements PluginROIDes
     public static final ROIReadOnlyDescriptor readOnlyDescriptor = new ROIReadOnlyDescriptor();
 
     @Override
-    public List<ROIDescriptor> getDescriptors() {
-        final List<ROIDescriptor> result = new ArrayList<>();
+    public List<ROIDescriptor<?>> getDescriptors() {
+        final List<ROIDescriptor<?>> result = new ArrayList<>();
 
         result.add(idDescriptor);
         result.add(iconDescriptor);
@@ -75,8 +75,8 @@ public class ROIPropertyDescriptorsPlugin extends Plugin implements PluginROIDes
     }
 
     @Override
-    public Map<ROIDescriptor, Object> compute(final ROI roi, final Sequence sequence) throws UnsupportedOperationException {
-        final Map<ROIDescriptor, Object> result = new HashMap<>();
+    public Map<ROIDescriptor<?>, Object> compute(final ROI roi, final Sequence sequence) throws UnsupportedOperationException {
+        final Map<ROIDescriptor<?>, Object> result = new HashMap<>();
 
         try {
             // compute descriptors

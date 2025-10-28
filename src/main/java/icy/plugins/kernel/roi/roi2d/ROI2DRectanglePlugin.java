@@ -33,7 +33,7 @@ import org.jetbrains.annotations.NotNull;
  * @author Thomas Musset
  */
 @IcyPluginName("Rectangle")
-@IcyPluginIcon(path = "/icy/extension/kernel/icons/roi/rectangle.svg", monochrome = true)
+@IcyPluginIcon(value = "roi/rectangle", monochrome = true)
 @IcyROIPlugin(type = ROIType.ROI2D, nbPoints = ROIPoints.TWO)
 public class ROI2DRectanglePlugin extends Plugin implements PluginROI {
     @Override

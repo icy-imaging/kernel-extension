@@ -59,8 +59,8 @@ public class ROIMassCenterDescriptorsPlugin extends Plugin implements PluginROID
     public static final ROIMassCenterCDescriptor massCenterCDescriptor = new ROIMassCenterCDescriptor();
 
     @Override
-    public List<ROIDescriptor> getDescriptors() {
-        final List<ROIDescriptor> result = new ArrayList<>();
+    public List<ROIDescriptor<?>> getDescriptors() {
+        final List<ROIDescriptor<?>> result = new ArrayList<>();
 
         result.add(massCenterXDescriptor);
         result.add(massCenterYDescriptor);
@@ -72,8 +72,8 @@ public class ROIMassCenterDescriptorsPlugin extends Plugin implements PluginROID
     }
 
     @Override
-    public Map<ROIDescriptor, Object> compute(final ROI roi, final Sequence sequence) throws InterruptedException {
-        final Map<ROIDescriptor, Object> result = new HashMap<>();
+    public Map<ROIDescriptor<?>, Object> compute(final ROI roi, final Sequence sequence) throws InterruptedException {
+        final Map<ROIDescriptor<?>, Object> result = new HashMap<>();
 
         // compute mass center descriptors
         final Point5D massCenter = ROIUtil.computeMassCenter(roi);

@@ -77,9 +77,11 @@ public abstract class PluginSearchResult extends SearchResult {
     @Override
     public Image getImage() {
         if (plugin.isIconLoaded())
-            return plugin.getIconAsImage();
+            //return plugin.getIconAsImage();
+            return null;
 
-        return PluginDescriptor.DEFAULT_ICON.getImage();
+        //return PluginDescriptor.DEFAULT_ICON.getImage();
+        return null;
     }
 
     @Override

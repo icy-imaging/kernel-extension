@@ -36,7 +36,7 @@ import org.jetbrains.annotations.NotNull;
  * @author Thomas Musset
  */
 @IcyPluginName("ROI Cutter")
-@IcyPluginIcon(path = "/icy/extension/kernel/icons/roi/cutter.svg", monochrome = true)
+@IcyPluginIcon(value = "roi/cutter", monochrome = true)
 @IcyROIPlugin(type = ROIType.TOOL)
 public class ROILineCutterPlugin extends Plugin implements PluginROI {
     @Override

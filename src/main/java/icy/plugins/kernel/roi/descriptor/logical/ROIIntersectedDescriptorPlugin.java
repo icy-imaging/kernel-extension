@@ -42,8 +42,8 @@ public class ROIIntersectedDescriptorPlugin extends Plugin implements PluginROID
     public static final ROIIntersectedDescriptor intersectedDescriptor = new ROIIntersectedDescriptor();
 
     @Override
-    public List<ROIDescriptor> getDescriptors() {
-        final List<ROIDescriptor> result = new ArrayList<>();
+    public List<ROIDescriptor<?>> getDescriptors() {
+        final List<ROIDescriptor<?>> result = new ArrayList<>();
 
         result.add(intersectedDescriptor);
 
@@ -51,8 +51,8 @@ public class ROIIntersectedDescriptorPlugin extends Plugin implements PluginROID
     }
 
     @Override
-    public Map<ROIDescriptor, Object> compute(final ROI roi, final Sequence sequence) throws UnsupportedOperationException, InterruptedException {
-        final Map<ROIDescriptor, Object> result = new HashMap<>();
+    public Map<ROIDescriptor<?>, Object> compute(final ROI roi, final Sequence sequence) throws UnsupportedOperationException, InterruptedException {
+        final Map<ROIDescriptor<?>, Object> result = new HashMap<>();
 
         result.put(intersectedDescriptor, intersectedDescriptor.compute(roi, sequence));
 

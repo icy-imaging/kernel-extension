@@ -42,8 +42,8 @@ public class ROIContainedDescriptorPlugin extends Plugin implements PluginROIDes
     public static final ROIContainedDescriptor containedDescriptor = new ROIContainedDescriptor();
 
     @Override
-    public List<ROIDescriptor> getDescriptors() {
-        final List<ROIDescriptor> result = new ArrayList<>();
+    public List<ROIDescriptor<?>> getDescriptors() {
+        final List<ROIDescriptor<?>> result = new ArrayList<>();
 
         result.add(containedDescriptor);
 
@@ -51,8 +51,8 @@ public class ROIContainedDescriptorPlugin extends Plugin implements PluginROIDes
     }
 
     @Override
-    public Map<ROIDescriptor, Object> compute(final ROI roi, final Sequence sequence) throws UnsupportedOperationException, InterruptedException {
-        final Map<ROIDescriptor, Object> result = new HashMap<>();
+    public Map<ROIDescriptor<?>, Object> compute(final ROI roi, final Sequence sequence) throws UnsupportedOperationException, InterruptedException {
+        final Map<ROIDescriptor<?>, Object> result = new HashMap<>();
 
         result.put(containedDescriptor, containedDescriptor.compute(roi, sequence));
 

@@ -117,7 +117,7 @@ public class LocalPluginSearchResultProducer extends SearchResultProducer {
             if (hasWaitingSearch())
                 return;
 
-            ((LocalPluginResult) result).getPlugin().loadImages();
+            //((LocalPluginResult) result).getPlugin().loadImages();
             consumer.resultChanged(this, result);
         }
     }

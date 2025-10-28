@@ -32,7 +32,7 @@ import org.bioimageanalysis.icy.gui.viewer.Viewer;
  * @author Thomas Musset
  */
 @IcyPluginName("Canvas 3D")
-@IcyPluginIcon(path = "/icy/extension/kernel/icons/canvas/3d_canvas.svg", monochrome = true)
+@IcyPluginIcon(value = "canvas/3d_canvas", monochrome = true)
 public class VtkCanvasPlugin extends Plugin implements PluginCanvas<VtkCanvas> {
     @Override
     public VtkCanvas createCanvas(final Viewer viewer) {

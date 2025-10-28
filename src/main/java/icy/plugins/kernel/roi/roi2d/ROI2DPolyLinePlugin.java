@@ -33,7 +33,7 @@ import org.jetbrains.annotations.NotNull;
  * @author Thomas Musset
  */
 @IcyPluginName("Polyline")
-@IcyPluginIcon(path = "/icy/extension/kernel/icons/roi/polyline.svg", monochrome = true)
+@IcyPluginIcon(value = "roi/polyline", monochrome = true)
 @IcyROIPlugin(type = ROIType.ROI2D, nbPoints = ROIPoints.INFINITE)
 public class ROI2DPolyLinePlugin extends Plugin implements PluginROI {
     @Override

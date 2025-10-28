@@ -33,7 +33,7 @@ import org.jetbrains.annotations.NotNull;
  * @author Thomas Musset
  */
 @IcyPluginName("Point")
-@IcyPluginIcon(path = "/icy/extension/kernel/icons/roi/point.svg", monochrome = true)
+@IcyPluginIcon(value = "roi/point", monochrome = true)
 @IcyROIPlugin(type = ROIType.ROI3D, nbPoints = ROIPoints.ONE)
 public class ROI3DPointPlugin extends Plugin implements PluginROI {
     @Override

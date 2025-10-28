@@ -58,8 +58,8 @@ public class ROIPositionDescriptorsPlugin extends Plugin implements PluginROIDes
     public static final ROIPositionCDescriptor positionCDescriptor = new ROIPositionCDescriptor();
 
     @Override
-    public List<ROIDescriptor> getDescriptors() {
-        final List<ROIDescriptor> result = new ArrayList<>();
+    public List<ROIDescriptor<?>> getDescriptors() {
+        final List<ROIDescriptor<?>> result = new ArrayList<>();
 
         result.add(positionXDescriptor);
         result.add(positionYDescriptor);
@@ -71,8 +71,8 @@ public class ROIPositionDescriptorsPlugin extends Plugin implements PluginROIDes
     }
 
     @Override
-    public Map<ROIDescriptor, Object> compute(final ROI roi, final Sequence sequence) throws UnsupportedOperationException {
-        final Map<ROIDescriptor, Object> result = new HashMap<>();
+    public Map<ROIDescriptor<?>, Object> compute(final ROI roi, final Sequence sequence) throws UnsupportedOperationException {
+        final Map<ROIDescriptor<?>, Object> result = new HashMap<>();
 
         try {
             // compute position descriptors

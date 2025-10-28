@@ -58,8 +58,8 @@ public class ROISizeDescriptorsPlugin extends Plugin implements PluginROIDescrip
     public static final ROISizeCDescriptor sizeCDescriptor = new ROISizeCDescriptor();
 
     @Override
-    public List<ROIDescriptor> getDescriptors() {
-        final List<ROIDescriptor> result = new ArrayList<>();
+    public List<ROIDescriptor<?>> getDescriptors() {
+        final List<ROIDescriptor<?>> result = new ArrayList<>();
 
         result.add(sizeXDescriptor);
         result.add(sizeYDescriptor);
@@ -71,8 +71,8 @@ public class ROISizeDescriptorsPlugin extends Plugin implements PluginROIDescrip
     }
 
     @Override
-    public Map<ROIDescriptor, Object> compute(final ROI roi, final Sequence sequence) throws UnsupportedOperationException {
-        final Map<ROIDescriptor, Object> result = new HashMap<>();
+    public Map<ROIDescriptor<?>, Object> compute(final ROI roi, final Sequence sequence) throws UnsupportedOperationException {
+        final Map<ROIDescriptor<?>, Object> result = new HashMap<>();
 
         try {
             // compute size descriptors

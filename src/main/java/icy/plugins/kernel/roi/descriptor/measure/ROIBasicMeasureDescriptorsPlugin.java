@@ -60,8 +60,8 @@ public class ROIBasicMeasureDescriptorsPlugin extends Plugin implements PluginRO
     public static final ROIVolumeDescriptor volumeDescriptor = new ROIVolumeDescriptor();
 
     @Override
-    public List<ROIDescriptor> getDescriptors() {
-        final List<ROIDescriptor> result = new ArrayList<>();
+    public List<ROIDescriptor<?>> getDescriptors() {
+        final List<ROIDescriptor<?>> result = new ArrayList<>();
 
         result.add(contourDescriptor);
         result.add(interiorDescriptor);
@@ -74,8 +74,8 @@ public class ROIBasicMeasureDescriptorsPlugin extends Plugin implements PluginRO
     }
 
     @Override
-    public Map<ROIDescriptor, Object> compute(final ROI roi, final Sequence sequence) throws UnsupportedOperationException, InterruptedException {
-        final Map<ROIDescriptor, Object> result = new HashMap<>();
+    public Map<ROIDescriptor<?>, Object> compute(final ROI roi, final Sequence sequence) throws UnsupportedOperationException, InterruptedException {
+        final Map<ROIDescriptor<?>, Object> result = new HashMap<>();
 
         // use the contour and interior to compute others descriptors
         final double contour = ROIContourDescriptor.computeContour(roi);
@@ -101,8 +101,7 @@ public class ROIBasicMeasureDescriptorsPlugin extends Plugin implements PluginRO
             notComputed++;
         }
         try {
-            result.put(surfaceAreaDescriptor,
-                    Double.valueOf(ROISurfaceAreaDescriptor.computeSurfaceArea(roi, sequence)));
+            result.put(surfaceAreaDescriptor, Double.valueOf(ROISurfaceAreaDescriptor.computeSurfaceArea(roi, sequence)));
         }
         catch (final UnsupportedOperationException e) {
             result.put(surfaceAreaDescriptor, null);

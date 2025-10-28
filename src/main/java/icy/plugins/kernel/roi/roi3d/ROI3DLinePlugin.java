@@ -33,7 +33,7 @@ import org.jetbrains.annotations.NotNull;
  * @author Thomas Musset
  */
 @IcyPluginName("Line")
-@IcyPluginIcon(path = "/icy/extension/kernel/icons/roi/line.svg", monochrome = true)
+@IcyPluginIcon(value = "roi/line", monochrome = true)
 @IcyROIPlugin(type = ROIType.ROI3D, nbPoints = ROIPoints.TWO)
 public class ROI3DLinePlugin extends Plugin implements PluginROI {
     @Override

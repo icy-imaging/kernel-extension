@@ -59,8 +59,8 @@ public class ROIIntensityDescriptorsPlugin extends Plugin implements PluginROIDe
     public static final ROIStandardDeviationDescriptor standardDeviationDescriptor = new ROIStandardDeviationDescriptor();
 
     @Override
-    public List<ROIDescriptor> getDescriptors() {
-        final List<ROIDescriptor> result = new ArrayList<>();
+    public List<ROIDescriptor<?>> getDescriptors() {
+        final List<ROIDescriptor<?>> result = new ArrayList<>();
 
         result.add(minIntensityDescriptor);
         result.add(meanIntensityDescriptor);
@@ -72,9 +72,8 @@ public class ROIIntensityDescriptorsPlugin extends Plugin implements PluginROIDe
     }
 
     @Override
-    public Map<ROIDescriptor, Object> compute(final ROI roi, final Sequence sequence)
-            throws UnsupportedOperationException, InterruptedException {
-        final Map<ROIDescriptor, Object> result = new HashMap<>();
+    public Map<ROIDescriptor<?>, Object> compute(final ROI roi, final Sequence sequence) throws UnsupportedOperationException {
+        final Map<ROIDescriptor<?>, Object> result = new HashMap<>();
         try {
             // compute intensity descriptors
             final IntensityDescriptorInfos intensityInfos = ROIUtil.computeIntensityDescriptors(roi, sequence, false);
