@@ -229,64 +229,65 @@ public class LociImporterPlugin extends PluginSequenceFileImporter {
                 buffers.push(new TilePixelsWorkBuffer(tw, th, rgbChannelCount, type));
 
             // create processor
-            final Processor readerProcessor = new Processor(numThread);
-            readerProcessor.setThreadName("Pixels tile reader");
+            try (final Processor readerProcessor = new Processor(numThread)) {
+                readerProcessor.setThreadName("Pixels tile reader");
 
-            // get all required tiles
-            final List<Rectangle> tiles = ImageUtil.getTileList(adjRegion, tw, th);
+                // get all required tiles
+                final List<Rectangle> tiles = ImageUtil.getTileList(adjRegion, tw, th);
 
-            // submit all tasks
-            for (final Rectangle tile : tiles) {
-                // wait a bit if the process queue is full
-                while (readerProcessor.isFull()) {
+                // submit all tasks
+                for (final Rectangle tile : tiles) {
+                    // wait a bit if the process queue is full
+                    while (readerProcessor.isFull()) {
+                        try {
+                            Thread.sleep(0);
+                        }
+                        catch (final InterruptedException e) {
+                            // interrupt all processes
+                            readerProcessor.shutdownNow();
+                            break;
+                        }
+                    }
+
+                    // submit next task
+                    readerProcessor.submit(new TilePixelsReaderWorker(tile.intersection(adjRegion)));
+
+                    // display progression
+                    if (listener != null) {
+                        // process cancel requested ?
+                        if (!listener.notifyProgress(readerProcessor.getCompletedTaskCount(), tiles.size())) {
+                            // interrupt processes
+                            readerProcessor.shutdownNow();
+                            break;
+                        }
+                    }
+                }
+
+                // wait for completion
+                while (readerProcessor.isProcessing()) {
                     try {
-                        Thread.sleep(0);
+                        Thread.sleep(1);
                     }
                     catch (final InterruptedException e) {
                         // interrupt all processes
                         readerProcessor.shutdownNow();
                         break;
                     }
-                }
 
-                // submit next task
-                readerProcessor.submit(new TilePixelsReaderWorker(tile.intersection(adjRegion)));
-
-                // display progression
-                if (listener != null) {
-                    // process cancel requested ?
-                    if (!listener.notifyProgress(readerProcessor.getCompletedTaskCount(), tiles.size())) {
-                        // interrupt processes
-                        readerProcessor.shutdownNow();
-                        break;
+                    // display progression
+                    if (listener != null) {
+                        // process cancel requested ?
+                        if (!listener.notifyProgress(readerProcessor.getCompletedTaskCount(), tiles.size())) {
+                            // interrupt processes
+                            readerProcessor.shutdownNow();
+                            break;
+                        }
                     }
                 }
+
+                // last wait for completion just in case we were interrupted
+                readerProcessor.waitAll();
             }
-
-            // wait for completion
-            while (readerProcessor.isProcessing()) {
-                try {
-                    Thread.sleep(1);
-                }
-                catch (final InterruptedException e) {
-                    // interrupt all processes
-                    readerProcessor.shutdownNow();
-                    break;
-                }
-
-                // display progression
-                if (listener != null) {
-                    // process cancel requested ?
-                    if (!listener.notifyProgress(readerProcessor.getCompletedTaskCount(), tiles.size())) {
-                        // interrupt processes
-                        readerProcessor.shutdownNow();
-                        break;
-                    }
-                }
-            }
-
-            // last wait for completion just in case we were interrupted
-            readerProcessor.waitAll();
 
             // faster memory release
             buffers.clear();
@@ -452,76 +453,76 @@ public class LociImporterPlugin extends PluginSequenceFileImporter {
                 buffers.push(new TileImageWorkBuffer(tw, th, sizeC, rgbChannelCount, type));
 
             // create processor
-            final Processor readerProcessor = new Processor(numThread);
+            try (final Processor readerProcessor = new Processor(numThread)) {
 
-            readerProcessor.setThreadName("Image tile reader");
+                readerProcessor.setThreadName("Image tile reader");
 
-            // force working in RAM as we will do many write operations (too slow with cache)
-            result.setVolatile(false);
-            // to avoid multiple update
-            result.beginUpdate();
+                // force working in RAM as we will do many write operations (too slow with cache)
+                result.setVolatile(false);
+                // to avoid multiple update
+                result.beginUpdate();
 
-            try {
-                // get all required tiles
-                final List<Rectangle> tiles = ImageUtil.getTileList(adjRegion, tw, th);
+                try {
+                    // get all required tiles
+                    final List<Rectangle> tiles = ImageUtil.getTileList(adjRegion, tw, th);
 
-                // submit all tasks
-                for (final Rectangle tile : tiles) {
-                    // wait a bit if the process queue is full
-                    while (readerProcessor.isFull()) {
+                    // submit all tasks
+                    for (final Rectangle tile : tiles) {
+                        // wait a bit if the process queue is full
+                        while (readerProcessor.isFull()) {
+                            try {
+                                Thread.sleep(0);
+                            }
+                            catch (final InterruptedException e) {
+                                // interrupt all processes
+                                readerProcessor.shutdownNow();
+                                break;
+                            }
+                        }
+
+                        // submit next task
+                        readerProcessor.submit(new TileImageReaderWorker(tile.intersection(adjRegion)));
+
+                        // display progression
+                        if (listener != null) {
+                            // process cancel requested ?
+                            if (!listener.notifyProgress(readerProcessor.getCompletedTaskCount(), tiles.size())) {
+                                // interrupt processes
+                                readerProcessor.shutdownNow();
+                                break;
+                            }
+                        }
+                    }
+
+                    // wait for completion
+                    while (readerProcessor.isProcessing()) {
                         try {
-                            Thread.sleep(0);
+                            Thread.sleep(1);
                         }
                         catch (final InterruptedException e) {
                             // interrupt all processes
                             readerProcessor.shutdownNow();
                             break;
                         }
-                    }
 
-                    // submit next task
-                    readerProcessor.submit(new TileImageReaderWorker(tile.intersection(adjRegion)));
-
-                    // display progression
-                    if (listener != null) {
-                        // process cancel requested ?
-                        if (!listener.notifyProgress(readerProcessor.getCompletedTaskCount(), tiles.size())) {
-                            // interrupt processes
-                            readerProcessor.shutdownNow();
-                            break;
+                        // display progression
+                        if (listener != null) {
+                            // process cancel requested ?
+                            if (!listener.notifyProgress(readerProcessor.getCompletedTaskCount(), tiles.size())) {
+                                // interrupt processes
+                                readerProcessor.shutdownNow();
+                                break;
+                            }
                         }
                     }
+
+                    // last wait for completion just in case we were interrupted
+                    readerProcessor.waitAll();
                 }
-
-                // wait for completion
-                while (readerProcessor.isProcessing()) {
-                    try {
-                        Thread.sleep(1);
-                    }
-                    catch (final InterruptedException e) {
-                        // interrupt all processes
-                        readerProcessor.shutdownNow();
-                        break;
-                    }
-
-                    // display progression
-                    if (listener != null) {
-                        // process cancel requested ?
-                        if (!listener.notifyProgress(readerProcessor.getCompletedTaskCount(), tiles.size())) {
-                            // interrupt processes
-                            readerProcessor.shutdownNow();
-                            break;
-                        }
-                    }
+                finally {
+                    result.endUpdate();
                 }
-
-                // last wait for completion just in case we were interrupted
-                readerProcessor.waitAll();
             }
-            finally {
-                result.endUpdate();
-            }
-
 
             // set back colormap
             for (int i = 0; i < colormaps.length; i++)

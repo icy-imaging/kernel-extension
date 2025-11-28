@@ -17,22 +17,32 @@
 
     <name>Kernel Extension</name>
     <description>Contains basics stuff for Icy</description>
-    <url></url>
+    <url>https://icy.bioimageanalysis.org/</url>
     <inceptionYear>2024</inceptionYear>
 
     <scm>
-        <url>https://gitlab.pasteur.fr/bia/icy/extensions/kernel-extensions</url>
+        <url>https://gitlab.pasteur.fr/bia/icy/extensions/kernel-extension</url>
+        <tag>v${project.version}</tag>
     </scm>
+
+    <issueManagement>
+        <system>GitLab Issues</system>
+        <url>https://gitlab.pasteur.fr/bia/icy/extensions/kernel-extension/-/issues</url>
+    </issueManagement>
+    <ciManagement>
+        <system>GitLab CI</system>
+        <url>https://gitlab.pasteur.fr/bia/icy/extensions/kernel-extension/-/pipelines</url>
+    </ciManagement>
 
     <organization>
         <name>Institut Pasteur</name>
-        <url>https://pasteur.fr</url>
+        <url>https://www.pasteur.fr/</url>
     </organization>
 
     <licenses>
         <license>
-            <name>GNU GPLv3</name>
-            <url>https://www.gnu.org/licenses/gpl-3.0.en.html</url>
+            <name>GNU LGPLv3</name>
+            <url>https://www.gnu.org/licenses/lgpl-3.0</url>
             <distribution>repo</distribution>
         </license>
     </licenses>
@@ -41,16 +51,27 @@
         <developer>
             <id>tmusset</id>
             <name>Thomas Musset</name>
-            <email>thomas.musset@pasteur.fr</email>
             <organization>Institut Pasteur</organization>
             <organizationUrl>https://pasteur.fr</organizationUrl>
-            <url>https://research.pasteur.fr/fr/member/thomas-musset/</url>
-            <roles>
-                <role>founder</role>
-                <role>developer</role>
-                <role>maintainer</role>
-            </roles>
-            <timezone>Europe/Paris</timezone>
+            <url>https://icy.bioimageanalysis.org/author/tmusset/</url>
         </developer>
     </developers>
+
+    <contributors>
+        <contributor>
+            <name>Thomas Musset</name>
+        </contributor>
+    </contributors>
+
+    <mailingLists>
+        <mailingList>
+            <name>Icy</name>
+            <post>icy.team@pasteur.fr</post>
+        </mailingList>
+    </mailingLists>
+
+    <properties>
+        <license.licenseName>GNU LGPLv3</license.licenseName>
+        <license.copyrightOwners>Institut Pasteur</license.copyrightOwners>
+    </properties>
 </project>
