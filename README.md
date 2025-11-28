@@ -31,6 +31,16 @@ Contains basics stuff for Icy like 2D canvas, ROI drawing tools, ROI descriptors
 3. Run `mvn`` command
 4. The extension was automatically installed in your local maven repository ``~/.m2/repository/``, and registered in your Icy workspace
 
+## Import in your extension
+
+Add this dependency block in your `pom.xml`
+```xml
+<dependency>
+    <groupId>org.bioimageanalysis.icy</groupId>
+    <artifactId>kernel-extension</artifactId>
+</dependency>
+```
+
 ## Citation
 
 Please cite this extension as follows:
