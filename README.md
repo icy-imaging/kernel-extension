@@ -26,10 +26,10 @@ Contains basics stuff for Icy like 2D canvas, ROI drawing tools, ROI descriptors
 - Maven 3.6.3+
 
 #### Steps
-1. Clone from git repository using ``git clone`` command
+1. Clone from git repository using `git clone` command
 2. Open your terminal and navigate to the folder containing the cloned repository
-3. Run `mvn`` command
-4. The extension was automatically installed in your local maven repository ``~/.m2/repository/``, and registered in your Icy workspace
+3. Run `mvn` command
+4. The extension was automatically installed in your local maven repository `~/.m2/repository/`, and registered in your Icy workspace
 
 ## Import in your extension
 
