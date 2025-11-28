@@ -1,5 +1,5 @@
 ![Version 1.0.0 alpha 5](https://img.shields.io/badge/v1.0.0-alpha_5-royalblue)
-![Java 25](https://img.shields.io/badge/OpenJDK-25-5382A1?labelColor=E76F00)
+![Java 17+](https://img.shields.io/badge/OpenJDK-17+-5382A1?labelColor=E76F00)
 [![License: LGPL v3](https://img.shields.io/badge/LGPLv3-008033?logo=GPLv3&logoSize=auto)](https://www.gnu.org/licenses/lgpl-3.0)
 [![Twitter](https://img.shields.io/twitter/follow/Icy_BioImaging)](https://x.com/Icy_BioImaging)
 [![Image.sc forum](https://img.shields.io/badge/dynamic/json?url=https%3A%2F%2Fforum.image.sc%2Ftag%2Ficy.json&query=%24.topic_list.tags.0.topic_count&suffix=%20topics&label=forum&color=0AA0B4)](https://forum.image.sc/tag/icy)
@@ -22,7 +22,7 @@ Contains basics stuff for Icy like 2D canvas, ROI drawing tools, ROI descriptors
 ### Install from source code
 
 #### Requirements
-- JDK 25 (for compiling the extension)
+- JDK 17+
 - Maven 3.6.3+
 
 #### Steps
