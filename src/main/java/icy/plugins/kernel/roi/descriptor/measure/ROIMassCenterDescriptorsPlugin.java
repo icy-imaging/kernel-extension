@@ -18,14 +18,14 @@
 
 package icy.plugins.kernel.roi.descriptor.measure;
 
-import org.bioimageanalysis.extension.kernel.roi.descriptor.measure.*;
-import org.bioimageanalysis.icy.common.geom.point.Point5D;
-import org.bioimageanalysis.icy.extension.plugin.abstract_.Plugin;
-import org.bioimageanalysis.icy.extension.plugin.interface_.PluginROIDescriptor;
-import org.bioimageanalysis.icy.model.roi.ROI;
-import org.bioimageanalysis.icy.model.roi.ROIDescriptor;
-import org.bioimageanalysis.icy.model.roi.ROIUtil;
-import org.bioimageanalysis.icy.model.sequence.Sequence;
+import fr.icy.extension.kernel.roi.descriptor.measure.*;
+import fr.icy.common.geom.point.Point5D;
+import fr.icy.extension.plugin.abstract_.Plugin;
+import fr.icy.extension.plugin.interface_.PluginROIDescriptor;
+import fr.icy.model.roi.ROI;
+import fr.icy.model.roi.ROIDescriptor;
+import fr.icy.model.roi.ROIUtil;
+import fr.icy.model.sequence.Sequence;
 
 import java.util.ArrayList;
 import java.util.HashMap;

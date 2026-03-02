@@ -1,5 +1,5 @@
 /*
- * Copyright (c) 2010-2025. Institut Pasteur.
+ * Copyright (c) 2010-2026. Institut Pasteur.
  *
  * This file is part of Icy.
  * Icy is free software: you can redistribute it and/or modify
@@ -16,14 +16,15 @@
  * along with Icy. If not, see <https://www.gnu.org/licenses/>.
  */
 
-package org.bioimageanalysis.icy.searchproducer;
+package fr.icy.searchproducer;
 
-import org.bioimageanalysis.icy.common.string.StringUtil;
-import org.bioimageanalysis.icy.gui.action.ActionManager;
-import org.bioimageanalysis.icy.gui.action.IcyAbstractAction;
-import org.bioimageanalysis.icy.network.search.SearchResult;
-import org.bioimageanalysis.icy.network.search.SearchResultConsumer;
-import org.bioimageanalysis.icy.network.search.SearchResultProducer;
+import fr.icy.common.string.StringUtil;
+import fr.icy.gui.action.ActionManager;
+import fr.icy.gui.action.IcyAbstractAction;
+import fr.icy.network.search.SearchResult;
+import fr.icy.network.search.SearchResultConsumer;
+import fr.icy.network.search.SearchResultProducer;
+import org.jetbrains.annotations.NotNull;
 
 import java.awt.*;
 import java.util.ArrayList;
@@ -41,7 +42,7 @@ public class KernelSearchResultProducer extends SearchResultProducer {
         private final int priority;
         private String description;
 
-        public KernelSearchResult(final SearchResultProducer provider, final IcyAbstractAction action, final List<SearchWord> searchWords, final int priority, final boolean startWithOnly) {
+        public KernelSearchResult(final SearchResultProducer provider, final @NotNull IcyAbstractAction action, final List<SearchWord> searchWords, final int priority, final boolean startWithOnly) {
             super(provider);
 
             this.action = action;
@@ -171,7 +172,7 @@ public class KernelSearchResultProducer extends SearchResultProducer {
         consumer.resultsChanged(this);
     }
 
-    public static int searchInAction(final IcyAbstractAction action, final List<SearchWord> words, final boolean startWithOnly) {
+    public static int searchInAction(final IcyAbstractAction action, final @NotNull List<SearchWord> words, final boolean startWithOnly) {
         int result = 0;
 
         // we accept action which contains all words only
@@ -192,7 +193,7 @@ public class KernelSearchResultProducer extends SearchResultProducer {
         return result / words.size();
     }
 
-    public static int searchInAction(final IcyAbstractAction action, final String word, final boolean startWithOnly) {
+    public static int searchInAction(final @NotNull IcyAbstractAction action, final @NotNull String word, final boolean startWithOnly) {
         final String wordlc = word.trim().toLowerCase();
         String text;
 

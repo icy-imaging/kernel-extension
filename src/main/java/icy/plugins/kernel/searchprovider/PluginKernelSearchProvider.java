@@ -17,11 +17,11 @@
  */
 package icy.plugins.kernel.searchprovider;
 
-import org.bioimageanalysis.icy.searchproducer.KernelSearchResultProducer;
-import org.bioimageanalysis.icy.extension.plugin.abstract_.Plugin;
-import org.bioimageanalysis.icy.extension.plugin.annotation_.IcyPluginName;
-import org.bioimageanalysis.icy.extension.plugin.interface_.PluginSearchProvider;
-import org.bioimageanalysis.icy.network.search.SearchResultProducer;
+import fr.icy.searchproducer.KernelSearchResultProducer;
+import fr.icy.extension.plugin.abstract_.Plugin;
+import fr.icy.extension.plugin.annotation_.IcyPluginName;
+import fr.icy.extension.plugin.interface_.PluginSearchProvider;
+import fr.icy.network.search.SearchResultProducer;
 
 /**
  * @author Stephane Dallongeville
