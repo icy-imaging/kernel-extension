@@ -8,12 +8,12 @@
     <parent>
         <groupId>org.bioimageanalysis.icy</groupId>
         <artifactId>pom-icy</artifactId>
-        <version>3.0.0-a.5</version>
+        <version>3.0.0-a.6</version>
     </parent>
 
     <!-- Project Information -->
     <artifactId>kernel-extension</artifactId>
-    <version>1.0.0-a.5</version>
+    <version>1.0.0-a.6</version>
 
     <name>Kernel Extension</name>
     <description>Contains basics stuff for Icy</description>
