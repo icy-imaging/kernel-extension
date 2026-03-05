@@ -6,7 +6,7 @@
 
 # Kernel Extension
 
-This is the repository for the source code of *Kernel Extension*, an extension for the [bioimage analysis software Icy](https://icy.bioimageanalysis.org/), which was developed by members or former members of the [Biological Image Analysis unit at Institut Pasteur](https://research.pasteur.fr/en/team/bioimage-analysis/). This plugin is licensed under LGPL3 license.     
+This is the repository for the source code of *Kernel Extension*, an extension for the [bioimage analysis software Icy](https://icy.bioimageanalysis.org/), which was developed by members or former members of the [Biological Image Analysis unit at Institut Pasteur](https://research.pasteur.fr/en/team/bioimage-analysis/). This plugin is licensed under the LGPL3 license.     
 Icy is developed and maintained by [Biological Image Analysis unit at Institut Pasteur](https://research.pasteur.fr/en/team/bioimage-analysis/). The [source code of Icy](https://gitlab.pasteur.fr/bia/icy/icy) is also licensed under a LGPL3 license.     
 
 ## Extension description
@@ -46,7 +46,7 @@ Add this dependency block in your `pom.xml`
 Please cite this extension as follows:
 
 Please also cite the Icy software and mention the version of Icy you used (bottom right corner of the GUI or first lines of the Output tab):     
-de Chaumont, F. et al. (2012) Icy: an open bioimage informatics platform for extended reproducible research, [Nature Methods](https://www.nature.com/articles/nmeth.2075), 9, pp. 690-696       
+de Chaumont, F. et al. (2012) Icy: an open bioimage informatics platform for extended reproducible research, [Nature Methods](https://www.nature.com/articles/nmeth.2075), 9, pp. 690–696       
 https://icy.bioimageanalysis.org
 
 ## Author(s)
