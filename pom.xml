@@ -13,7 +13,7 @@
 
     <!-- Project Information -->
     <artifactId>kernel-extension</artifactId>
-    <version>1.0.0-a.6</version>
+    <version>1.0.0-a.7-SNAPSHOT</version>
 
     <name>Kernel Extension</name>
     <description>Contains basics stuff for Icy</description>

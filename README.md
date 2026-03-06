@@ -1,4 +1,4 @@
-![Version 1.0.0 alpha 6](https://img.shields.io/badge/v1.0.0-alpha_6-royalblue)
+![Version 1.0.0 alpha 7](https://img.shields.io/badge/v1.0.0-alpha_7-royalblue)
 ![Java 17+](https://img.shields.io/badge/OpenJDK-17+-5382A1?labelColor=E76F00)
 [![License: LGPL v3](https://img.shields.io/badge/LGPLv3-008033?logo=GPLv3&logoSize=auto)](https://www.gnu.org/licenses/lgpl-3.0)
 [![Twitter](https://img.shields.io/twitter/follow/Icy_BioImaging)](https://x.com/Icy_BioImaging)
@@ -7,7 +7,7 @@
 # Kernel Extension
 
 This is the repository for the source code of *Kernel Extension*, an extension for the [bioimage analysis software Icy](https://icy.bioimageanalysis.org/), which was developed by members or former members of the [Biological Image Analysis unit at Institut Pasteur](https://research.pasteur.fr/en/team/bioimage-analysis/). This plugin is licensed under the LGPL3 license.     
-Icy is developed and maintained by [Biological Image Analysis unit at Institut Pasteur](https://research.pasteur.fr/en/team/bioimage-analysis/). The [source code of Icy](https://gitlab.pasteur.fr/bia/icy/icy) is also licensed under a LGPL3 license.     
+Icy is developed and maintained by [Biological Image Analysis unit at Institut Pasteur](https://research.pasteur.fr/en/team/bioimage-analysis/). The [source code of Icy](https://gitlab.pasteur.fr/bia/icy/icy) is also licensed under the LGPL3 license.     
 
 ## Extension description
 
