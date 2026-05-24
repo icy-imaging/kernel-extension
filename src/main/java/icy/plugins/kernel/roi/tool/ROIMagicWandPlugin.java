@@ -18,15 +18,15 @@
 
 package icy.plugins.kernel.roi.tool;
 
-import org.bioimageanalysis.icy.common.geom.point.Point5D;
-import org.bioimageanalysis.icy.extension.plugin.abstract_.Plugin;
-import org.bioimageanalysis.icy.extension.plugin.annotation_.IcyPluginIcon;
-import org.bioimageanalysis.icy.extension.plugin.annotation_.IcyPluginName;
-import org.bioimageanalysis.icy.extension.plugin.annotation_.IcyROIPlugin;
-import org.bioimageanalysis.icy.extension.plugin.annotation_.ROIType;
-import org.bioimageanalysis.icy.extension.plugin.interface_.PluginROI;
-import org.bioimageanalysis.icy.model.roi.ROI;
-import org.bioimageanalysis.icy.model.roi.tool.ROIMagicWand;
+import fr.icy.common.geom.point.Point5D;
+import fr.icy.extension.plugin.abstract_.Plugin;
+import fr.icy.extension.plugin.annotation_.IcyPluginIcon;
+import fr.icy.extension.plugin.annotation_.IcyPluginName;
+import fr.icy.extension.plugin.annotation_.IcyROIPlugin;
+import fr.icy.extension.plugin.annotation_.ROIType;
+import fr.icy.extension.plugin.interface_.PluginROI;
+import fr.icy.model.roi.ROI;
+import fr.icy.model.roi.tool.ROIMagicWand;
 import org.jetbrains.annotations.NotNull;
 
 /**

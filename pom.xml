@@ -4,34 +4,33 @@
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
 
-    <!-- Inherited Icy Parent POM -->
     <parent>
-        <groupId>org.bioimageanalysis.icy</groupId>
+        <groupId>fr.icy</groupId>
         <artifactId>pom-icy</artifactId>
-        <version>3.0.0-a.6</version>
+        <version>3.0.0-a.7</version>
     </parent>
 
-    <!-- Project Information -->
-    <artifactId>kernel-extension</artifactId>
+    <groupId>fr.icy.ext</groupId>
+    <artifactId>kernel</artifactId>
     <version>1.0.0-a.7-SNAPSHOT</version>
 
     <name>Kernel Extension</name>
     <description>Contains basics stuff for Icy</description>
-    <url>https://icy.bioimageanalysis.org/</url>
+    <url>https://icy.bioimageanalysis.org</url>
     <inceptionYear>2024</inceptionYear>
 
     <scm>
-        <url>https://gitlab.pasteur.fr/bia/icy/extensions/kernel-extension</url>
+        <url>https://gitlab.pasteur.fr/bia/icy/extensions/kernel</url>
         <tag>v${project.version}</tag>
     </scm>
 
     <issueManagement>
         <system>GitLab Issues</system>
-        <url>https://gitlab.pasteur.fr/bia/icy/extensions/kernel-extension/-/issues</url>
+        <url>https://gitlab.pasteur.fr/bia/icy/extensions/kernel/-/issues</url>
     </issueManagement>
     <ciManagement>
         <system>GitLab CI</system>
-        <url>https://gitlab.pasteur.fr/bia/icy/extensions/kernel-extension/-/pipelines</url>
+        <url>https://gitlab.pasteur.fr/bia/icy/extensions/kernel/-/pipelines</url>
     </ciManagement>
 
     <organization>
@@ -60,6 +59,7 @@
     <contributors>
         <contributor>
             <name>Thomas Musset</name>
+            <properties><id>Azargas</id></properties>
         </contributor>
     </contributors>
 

@@ -16,14 +16,14 @@
  * along with Icy. If not, see <https://www.gnu.org/licenses/>.
  */
 
-package org.bioimageanalysis.icy.searchproducer;
+package fr.icy.ext.kernel.searchproducer;
 
-import org.bioimageanalysis.icy.common.string.StringUtil;
-import org.bioimageanalysis.icy.gui.action.ActionManager;
-import org.bioimageanalysis.icy.gui.action.IcyAbstractAction;
-import org.bioimageanalysis.icy.network.search.SearchResult;
-import org.bioimageanalysis.icy.network.search.SearchResultConsumer;
-import org.bioimageanalysis.icy.network.search.SearchResultProducer;
+import fr.icy.common.string.StringUtil;
+import fr.icy.gui.action.ActionManager;
+import fr.icy.gui.action.IcyAbstractAction;
+import fr.icy.network.search.SearchResult;
+import fr.icy.network.search.SearchResultConsumer;
+import fr.icy.network.search.SearchResultProducer;
 
 import java.awt.*;
 import java.util.ArrayList;

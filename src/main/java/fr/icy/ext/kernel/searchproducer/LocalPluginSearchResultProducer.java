@@ -15,15 +15,15 @@
  * You should have received a copy of the GNU General Public License
  * along with Icy. If not, see <https://www.gnu.org/licenses/>.
  */
-package org.bioimageanalysis.icy.searchproducer;
+package fr.icy.ext.kernel.searchproducer;
 
-import org.bioimageanalysis.icy.extension.plugin.PluginDescriptor;
-import org.bioimageanalysis.icy.extension.plugin.PluginLauncher;
-import org.bioimageanalysis.icy.extension.plugin.PluginLoader;
-import org.bioimageanalysis.icy.gui.plugin.PluginDetailPanel;
-import org.bioimageanalysis.icy.network.search.SearchResult;
-import org.bioimageanalysis.icy.network.search.SearchResultConsumer;
-import org.bioimageanalysis.icy.network.search.SearchResultProducer;
+import fr.icy.extension.plugin.PluginDescriptor;
+import fr.icy.extension.plugin.PluginLauncher;
+import fr.icy.extension.plugin.PluginLoader;
+import fr.icy.gui.plugin.PluginDetailPanel;
+import fr.icy.network.search.SearchResult;
+import fr.icy.network.search.SearchResultConsumer;
+import fr.icy.network.search.SearchResultProducer;
 
 import java.util.ArrayList;
 import java.util.List;

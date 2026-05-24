@@ -18,12 +18,12 @@
 
 package icy.plugins.kernel.roi.roi2d;
 
-import org.bioimageanalysis.extension.kernel.roi.roi2d.ROI2DRectangle;
-import org.bioimageanalysis.icy.common.geom.point.Point5D;
-import org.bioimageanalysis.icy.extension.plugin.abstract_.Plugin;
-import org.bioimageanalysis.icy.extension.plugin.annotation_.*;
-import org.bioimageanalysis.icy.extension.plugin.interface_.PluginROI;
-import org.bioimageanalysis.icy.model.roi.ROI;
+import fr.icy.extension.kernel.roi.roi2d.ROI2DRectangle;
+import fr.icy.common.geom.point.Point5D;
+import fr.icy.extension.plugin.abstract_.Plugin;
+import fr.icy.extension.plugin.annotation_.*;
+import fr.icy.extension.plugin.interface_.PluginROI;
+import fr.icy.model.roi.ROI;
 import org.jetbrains.annotations.NotNull;
 
 /**

@@ -15,15 +15,14 @@
  * You should have received a copy of the GNU General Public License
  * along with Icy. If not, see <https://www.gnu.org/licenses/>.
  */
-package org.bioimageanalysis.icy.searchproducer;
+package fr.icy.ext.kernel.searchproducer;
 
-import org.bioimageanalysis.icy.Icy;
-import org.bioimageanalysis.icy.extension.plugin.*;
-import org.bioimageanalysis.icy.gui.plugin.PluginDetailPanel;
-import org.bioimageanalysis.icy.io.xml.XMLUtil;
-import org.bioimageanalysis.icy.network.NetworkUtil;
-import org.bioimageanalysis.icy.network.search.*;
-import org.bioimageanalysis.icy.system.thread.ThreadUtil;
+import fr.icy.Icy;
+import fr.icy.extension.plugin.*;
+import fr.icy.io.xml.XMLUtil;
+import fr.icy.network.NetworkUtil;
+import fr.icy.network.search.*;
+import fr.icy.system.thread.ThreadUtil;
 import org.w3c.dom.Document;
 import org.w3c.dom.Element;
 

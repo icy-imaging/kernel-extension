@@ -18,12 +18,12 @@
 
 package icy.plugins.kernel.canvas;
 
-import org.bioimageanalysis.icy.extension.plugin.abstract_.Plugin;
-import org.bioimageanalysis.icy.extension.plugin.annotation_.IcyPluginIcon;
-import org.bioimageanalysis.icy.extension.plugin.annotation_.IcyPluginName;
-import org.bioimageanalysis.icy.extension.plugin.interface_.PluginCanvas;
-import org.bioimageanalysis.icy.gui.canvas.VtkCanvas;
-import org.bioimageanalysis.icy.gui.viewer.Viewer;
+import fr.icy.extension.plugin.abstract_.Plugin;
+import fr.icy.extension.plugin.annotation_.IcyPluginIcon;
+import fr.icy.extension.plugin.annotation_.IcyPluginName;
+import fr.icy.extension.plugin.interface_.PluginCanvas;
+import fr.icy.gui.canvas.VtkCanvas;
+import fr.icy.gui.viewer.Viewer;
 
 /**
  * Plugin wrapper for VtkCanvas
