@@ -21,7 +21,7 @@ import fr.icy.extension.plugin.abstract_.Plugin;
 import fr.icy.extension.plugin.annotation_.IcyPluginName;
 import fr.icy.extension.plugin.interface_.PluginSearchProvider;
 import fr.icy.network.search.SearchResultProducer;
-import fr.icy.ext.kernel.searchproducer.OnlinePluginSearchResultProducer;
+import fr.icy.extensions.kernel.searchproducer.OnlinePluginSearchResultProducer;
 
 /**
  * @author Stephane Dallongeville

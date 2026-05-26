@@ -16,7 +16,7 @@
  * along with Icy. If not, see <https://www.gnu.org/licenses/>.
  */
 
-package fr.icy.ext.kernel.searchproducer;
+package fr.icy.extensions.kernel.searchproducer;
 
 import fr.icy.common.string.StringUtil;
 import fr.icy.gui.action.ActionManager;

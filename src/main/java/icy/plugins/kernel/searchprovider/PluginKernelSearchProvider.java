@@ -17,7 +17,7 @@
  */
 package icy.plugins.kernel.searchprovider;
 
-import fr.icy.ext.kernel.searchproducer.KernelSearchResultProducer;
+import fr.icy.extensions.kernel.searchproducer.KernelSearchResultProducer;
 import fr.icy.extension.plugin.abstract_.Plugin;
 import fr.icy.extension.plugin.annotation_.IcyPluginName;
 import fr.icy.extension.plugin.interface_.PluginSearchProvider;
