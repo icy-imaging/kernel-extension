@@ -12,7 +12,7 @@
 
     <groupId>fr.icy.extensions</groupId>
     <artifactId>kernel</artifactId>
-    <version>1.0.0-a.7-SNAPSHOT</version>
+    <version>1.0.0-a.7</version>
 
     <name>Kernel Extension</name>
     <description>Contains basics stuff for Icy</description>
