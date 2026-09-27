@@ -1513,10 +1513,10 @@ public class LociImporterPlugin extends PluginSequenceFileImporter {
         if (interleaved) {
             // get channel interleaved data
             final byte[] channelData = Array1DUtil.getInterleavedData(rawData, subC, rgbChanCount, channelBuffer, 0, componentByteLen);
-            ByteArrayConvert.byteArrayTo(channelData, 0, result, 0, componentByteLen, little);
+            ByteArrayConvert.byteArrayToArray(channelData, 0, result, 0, componentByteLen, little);
         }
         else
-            ByteArrayConvert.byteArrayTo(rawData, subC * componentByteLen, result, 0, componentByteLen, little);
+            ByteArrayConvert.byteArrayToArray(rawData, subC * componentByteLen, result, 0, componentByteLen, little);
 
         // don't need downscaling ? --> we can return raw pixels immediately
         if (downScaleLevel <= 0)
@@ -1768,13 +1768,13 @@ public class LociImporterPlugin extends PluginSequenceFileImporter {
                 for (int sc = 0; sc < rgbChanCount; sc++) {
                     // get channel interleaved data
                     Array1DUtil.getInterleavedData(rawData, inOffset, rgbChanCount, channelData, 0, componentByteLen);
-                    ByteArrayConvert.byteArrayTo(channelData, 0, Objects.requireNonNull(pixelData)[c + sc], 0, componentByteLen, little);
+                    ByteArrayConvert.byteArrayToArray(channelData, 0, Objects.requireNonNull(pixelData)[c + sc], 0, componentByteLen, little);
                     inOffset++;
                 }
             }
             else {
                 for (int sc = 0; sc < rgbChanCount; sc++) {
-                    ByteArrayConvert.byteArrayTo(rawData, inOffset, Objects.requireNonNull(pixelData)[c + sc], 0, componentByteLen, little);
+                    ByteArrayConvert.byteArrayToArray(rawData, inOffset, Objects.requireNonNull(pixelData)[c + sc], 0, componentByteLen, little);
                     inOffset += componentByteLen;
                 }
             }

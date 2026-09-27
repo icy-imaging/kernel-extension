@@ -1512,10 +1512,10 @@ public class LociImporterPlugin extends PluginSequenceFileImporter {
         if (interleaved) {
             // get channel interleaved data
             final byte[] channelData = Array1DUtil.getInterleavedData(rawData, subC, rgbChanCount, channelBuffer, 0, componentByteLen);
-            ByteArrayConvert.byteArrayTo(channelData, 0, result, 0, componentByteLen, little);
+            ByteArrayConvert.byteArrayToArray(channelData, 0, result, 0, componentByteLen, little);
         }
         else
-            ByteArrayConvert.byteArrayTo(rawData, subC * componentByteLen, result, 0, componentByteLen, little);
+            ByteArrayConvert.byteArrayToArray(rawData, subC * componentByteLen, result, 0, componentByteLen, little);
 
         // don't need downscaling ? --> we can return raw pixels immediately
         if (downScaleLevel <= 0)
@@ -1717,6 +1717,7 @@ public class LociImporterPlugin extends PluginSequenceFileImporter {
      */
     protected static IcyBufferedImage getImageInternal(final IFormatReader reader, final Rectangle rect, final int z, final int t, final boolean thumbnail, final int downScaleLevel, final byte[] rawBuffer, final byte[] channelBuffer, final Object[] pixelBuffer) throws UnsupportedOperationException, OutOfMemoryError, FormatException, IOException {
         // get pixel data type
+        @SuppressWarnings("MagicConstant")
         final DataType dataType = DataType.getDataTypeFromFormatToolsType(reader.getPixelType());
         // get sizeC
         final int effSizeC = reader.getEffectiveSizeC();
@@ -1739,10 +1740,9 @@ public class LociImporterPlugin extends PluginSequenceFileImporter {
 
         if (pixelBuffer == null) {
             // allocate array
-            pixelData = Array2DUtil.createArray(Objects.requireNonNull(dataType), sizeC);
-            if (pixelData != null)
-                for (int i = 0; i < sizeC; i++)
-                    pixelData[i] = Array1DUtil.createArray(dataType, sizeX * sizeY);
+            pixelData = Array2DUtil.createArray(dataType, sizeC);
+            for (int i = 0; i < sizeC; i++)
+                pixelData[i] = Array1DUtil.createArray(dataType, sizeX * sizeY);
         }
         else
             pixelData = pixelBuffer;
@@ -1767,13 +1767,13 @@ public class LociImporterPlugin extends PluginSequenceFileImporter {
                 for (int sc = 0; sc < rgbChanCount; sc++) {
                     // get channel interleaved data
                     Array1DUtil.getInterleavedData(rawData, inOffset, rgbChanCount, channelData, 0, componentByteLen);
-                    ByteArrayConvert.byteArrayTo(channelData, 0, Objects.requireNonNull(pixelData)[c + sc], 0, componentByteLen, little);
+                    ByteArrayConvert.byteArrayToArray(channelData, 0, Objects.requireNonNull(pixelData)[c + sc], 0, componentByteLen, little);
                     inOffset++;
                 }
             }
             else {
                 for (int sc = 0; sc < rgbChanCount; sc++) {
-                    ByteArrayConvert.byteArrayTo(rawData, inOffset, Objects.requireNonNull(pixelData)[c + sc], 0, componentByteLen, little);
+                    ByteArrayConvert.byteArrayToArray(rawData, inOffset, Objects.requireNonNull(pixelData)[c + sc], 0, componentByteLen, little);
                     inOffset += componentByteLen;
                 }
             }

@@ -91,10 +91,10 @@ public abstract class PluginSearchResult extends SearchResult {
 
     @Override
     public void executeAlternate() {
-        final String url = plugin.getWeb();
+        //final String url = plugin.getWeb();
 
-        if (!StringUtil.isEmpty(url))
-            NetworkUtil.openBrowser(url);
+        //if (!StringUtil.isEmpty(url))
+            //NetworkUtil.openBrowser(url);
     }
 
     @Override

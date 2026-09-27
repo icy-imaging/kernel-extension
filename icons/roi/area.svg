@@ -10,14 +10,9 @@
     <pattern
             id="diagonalHatch"
             patternUnits="userSpaceOnUse"
-            width="10"
-            height="10">
-        <path
-                fill="none"
-                stroke="#000"
-                stroke-width="3"
-                d="M-3,3 l5,-5 M0,10 l10,-10 M8,12 l4,-4"
-        />
+            width="20"
+            height="20">
+        <rect fill="#000" opacity=".3" stroke="none" x="0" y="0" width="20" height="20" />
     </pattern>
     <g>
         <ellipse

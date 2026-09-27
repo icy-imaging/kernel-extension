@@ -36,7 +36,7 @@ import org.jetbrains.annotations.NotNull;
  * @author Thomas Musset
  */
 @IcyPluginName("Magic Wand")
-@IcyPluginIcon(value = "roi/magic_wand", monochrome = true)
+@IcyPluginIcon(value = "roi/wand", monochrome = true)
 @IcyROIPlugin(type = ROIType.TOOL)
 public class ROIMagicWandPlugin extends Plugin implements PluginROI {
     @Override

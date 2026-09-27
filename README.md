@@ -1,4 +1,4 @@
-![Version 1.0.0 alpha 7](https://img.shields.io/badge/v1.0.0-alpha_7-royalblue)
+![Version 1.0.0 alpha 8](https://img.shields.io/badge/v1.0.0-alpha_8-royalblue)
 ![Java 17+](https://img.shields.io/badge/OpenJDK-17+-5382A1?labelColor=E76F00)
 [![License: LGPL v3](https://img.shields.io/badge/LGPLv3-008033?logo=GPLv3&logoSize=auto)](https://www.gnu.org/licenses/lgpl-3.0)
 [![Twitter](https://img.shields.io/twitter/follow/Icy_BioImaging)](https://x.com/Icy_BioImaging)
@@ -36,8 +36,8 @@ Contains basics stuff for Icy like 2D canvas, ROI drawing tools, ROI descriptors
 Add this dependency block in your `pom.xml`
 ```xml
 <dependency>
-    <groupId>org.bioimageanalysis.icy</groupId>
-    <artifactId>kernel-extension</artifactId>
+    <groupId>fr.icy.extensions</groupId>
+    <artifactId>kernel</artifactId>
 </dependency>
 ```
 
