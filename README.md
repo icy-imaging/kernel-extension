@@ -36,8 +36,9 @@ Contains basics stuff for Icy like 2D canvas, ROI drawing tools, ROI descriptors
 Add this dependency block in your `pom.xml`
 ```xml
 <dependency>
-    <groupId>fr.icy.extensions</groupId>
+    <groupId>fr.icy.extension</groupId>
     <artifactId>kernel</artifactId>
+    <version>${fr.icy.extension.kernel.version}</version>
 </dependency>
 ```
 
