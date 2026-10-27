@@ -20,6 +20,9 @@ package icy.plugins.kernel.roi.descriptor.logical;
 
 import fr.icy.extension.kernel.roi.descriptor.logical.ROIIntersectedDescriptor;
 import fr.icy.extension.plugin.abstract_.Plugin;
+import fr.icy.extension.plugin.annotation_.IcyPluginCategory;
+import fr.icy.extension.plugin.annotation_.IcyPluginName;
+import fr.icy.extension.plugin.annotation_.IcyPluginTags;
 import fr.icy.extension.plugin.interface_.PluginROIDescriptor;
 import fr.icy.model.roi.ROI;
 import fr.icy.model.roi.ROIDescriptor;
@@ -36,6 +39,9 @@ import java.util.Map;
  * @author Stephane Dallongeville
  * @author Thomas Musset
  */
+@IcyPluginName("ROI Intersected Descriptor")
+@IcyPluginCategory("ROI Descriptor")
+@IcyPluginTags({"ROI", "Intersect"})
 public class ROIIntersectedDescriptorPlugin extends Plugin implements PluginROIDescriptor {
     public static final String ID_INTERSECTED_ROIS = ROIIntersectedDescriptor.ID;
 

@@ -20,6 +20,9 @@ package icy.plugins.kernel.roi.descriptor.property;
 
 import fr.icy.extension.kernel.roi.descriptor.property.*;
 import fr.icy.extension.plugin.abstract_.Plugin;
+import fr.icy.extension.plugin.annotation_.IcyPluginCategory;
+import fr.icy.extension.plugin.annotation_.IcyPluginName;
+import fr.icy.extension.plugin.annotation_.IcyPluginTags;
 import fr.icy.extension.plugin.interface_.PluginROIDescriptor;
 import fr.icy.model.roi.ROI;
 import fr.icy.model.roi.ROIDescriptor;
@@ -42,6 +45,9 @@ import java.util.Map;
  * @author Stephane Dallongeville
  * @author Thomas Musset
  */
+@IcyPluginName("ROI Property Descriptor")
+@IcyPluginCategory("ROI Descriptor")
+@IcyPluginTags({"ROI", "Property"})
 public class ROIPropertyDescriptorsPlugin extends Plugin implements PluginROIDescriptor {
     public static final String ID_ID = ROIIdDescriptor.ID;
     public static final String ID_ICON = ROIIconDescriptor.ID;

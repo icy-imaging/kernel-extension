@@ -35,6 +35,8 @@ import org.jetbrains.annotations.NotNull;
 @IcyPluginName("Line")
 @IcyPluginIcon(value = "roi/line", monochrome = true)
 @IcyROIPlugin(type = ROIType.ROI2D, nbPoints = ROIPoints.TWO)
+@IcyPluginCategory("ROI Tool")
+@IcyPluginTags({"ROI", "Line", "2D"})
 public class ROI2DLinePlugin extends Plugin implements PluginROI {
     @Override
     public @NotNull String getROIClassName() {

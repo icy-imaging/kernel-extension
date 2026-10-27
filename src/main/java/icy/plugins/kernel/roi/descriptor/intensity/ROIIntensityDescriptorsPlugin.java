@@ -20,6 +20,9 @@ package icy.plugins.kernel.roi.descriptor.intensity;
 
 import fr.icy.extension.kernel.roi.descriptor.intensity.*;
 import fr.icy.extension.plugin.abstract_.Plugin;
+import fr.icy.extension.plugin.annotation_.IcyPluginCategory;
+import fr.icy.extension.plugin.annotation_.IcyPluginName;
+import fr.icy.extension.plugin.annotation_.IcyPluginTags;
 import fr.icy.extension.plugin.interface_.PluginROIDescriptor;
 import fr.icy.model.roi.ROI;
 import fr.icy.model.roi.ROIDescriptor;
@@ -45,6 +48,9 @@ import java.util.Map;
  * @author Stephane Dallongeville
  * @author Thomas Musset
  */
+@IcyPluginName("ROI Intensity Descriptor")
+@IcyPluginCategory("ROI Descriptor")
+@IcyPluginTags({"ROI", "Intensity"})
 public class ROIIntensityDescriptorsPlugin extends Plugin implements PluginROIDescriptor {
     public static final String ID_MIN_INTENSITY = ROIMinIntensityDescriptor.ID;
     public static final String ID_MEAN_INTENSITY = ROIMeanIntensityDescriptor.ID;

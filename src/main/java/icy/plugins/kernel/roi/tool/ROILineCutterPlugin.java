@@ -20,10 +20,7 @@ package icy.plugins.kernel.roi.tool;
 
 import fr.icy.common.geom.point.Point5D;
 import fr.icy.extension.plugin.abstract_.Plugin;
-import fr.icy.extension.plugin.annotation_.IcyPluginIcon;
-import fr.icy.extension.plugin.annotation_.IcyPluginName;
-import fr.icy.extension.plugin.annotation_.IcyROIPlugin;
-import fr.icy.extension.plugin.annotation_.ROIType;
+import fr.icy.extension.plugin.annotation_.*;
 import fr.icy.extension.plugin.interface_.PluginROI;
 import fr.icy.model.roi.ROI;
 import fr.icy.model.roi.tool.ROILineCutter;
@@ -38,6 +35,8 @@ import org.jetbrains.annotations.NotNull;
 @IcyPluginName("ROI Cutter")
 @IcyPluginIcon(value = "roi/cutter", monochrome = true)
 @IcyROIPlugin(type = ROIType.TOOL)
+@IcyPluginCategory("ROI Tool")
+@IcyPluginTags({"ROI", "Cutter"})
 public class ROILineCutterPlugin extends Plugin implements PluginROI {
     @Override
     public @NotNull String getROIClassName() {

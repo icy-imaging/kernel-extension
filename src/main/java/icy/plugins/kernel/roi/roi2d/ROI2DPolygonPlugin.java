@@ -35,6 +35,8 @@ import org.jetbrains.annotations.NotNull;
 @IcyPluginName("Polygon")
 @IcyPluginIcon(value = "roi/polygon", monochrome = true)
 @IcyROIPlugin(type = ROIType.ROI2D, nbPoints = ROIPoints.INFINITE)
+@IcyPluginCategory("ROI Tool")
+@IcyPluginTags({"ROI", "Polygon", "2D"})
 public class ROI2DPolygonPlugin extends Plugin implements PluginROI {
     @Override
     public @NotNull String getROIClassName() {

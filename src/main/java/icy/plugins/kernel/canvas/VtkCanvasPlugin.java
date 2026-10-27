@@ -19,8 +19,10 @@
 package icy.plugins.kernel.canvas;
 
 import fr.icy.extension.plugin.abstract_.Plugin;
+import fr.icy.extension.plugin.annotation_.IcyPluginCategory;
 import fr.icy.extension.plugin.annotation_.IcyPluginIcon;
 import fr.icy.extension.plugin.annotation_.IcyPluginName;
+import fr.icy.extension.plugin.annotation_.IcyPluginTags;
 import fr.icy.extension.plugin.interface_.PluginCanvas;
 import fr.icy.gui.canvas.VtkCanvas;
 import fr.icy.gui.viewer.Viewer;
@@ -33,6 +35,8 @@ import fr.icy.gui.viewer.Viewer;
  */
 @IcyPluginName("Canvas 3D")
 @IcyPluginIcon(value = "canvas/3d_canvas", monochrome = true)
+@IcyPluginCategory("Canvas")
+@IcyPluginTags({"Canvas", "3D", "VTK"})
 public class VtkCanvasPlugin extends Plugin implements PluginCanvas<VtkCanvas> {
     @Override
     public VtkCanvas createCanvas(final Viewer viewer) {

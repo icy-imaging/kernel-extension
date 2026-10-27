@@ -35,6 +35,8 @@ import org.jetbrains.annotations.NotNull;
 @IcyPluginName("Ellipse")
 @IcyPluginIcon(value = "roi/ellipse", monochrome = true)
 @IcyROIPlugin(type = ROIType.ROI2D, nbPoints = ROIPoints.TWO)
+@IcyPluginCategory("ROI Tool")
+@IcyPluginTags({"ROI", "Ellipse", "2D"})
 public class ROI2DEllipsePlugin extends Plugin implements PluginROI {
     @Override
     public @NotNull String getROIClassName() {

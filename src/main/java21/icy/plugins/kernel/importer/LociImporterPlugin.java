@@ -18,6 +18,8 @@
 
 package icy.plugins.kernel.importer;
 
+import fr.icy.extension.plugin.annotation_.IcyPluginCategory;
+import fr.icy.extension.plugin.annotation_.IcyPluginTags;
 import loci.formats.*;
 import loci.formats.gui.AWTImageTools;
 import loci.formats.gui.ExtensionFileFilter;
@@ -72,7 +74,9 @@ import java.util.Stack;
  *
  * @author Stephane Dallongeville
  */
-@IcyPluginName("Loci Importer")
+@IcyPluginName("LOCI Importer")
+@IcyPluginCategory("Importer")
+@IcyPluginTags("Importer")
 public class LociImporterPlugin extends PluginSequenceFileImporter {
     protected static class LociAllFileFilter extends AllImagesFileFilter {
         @Override

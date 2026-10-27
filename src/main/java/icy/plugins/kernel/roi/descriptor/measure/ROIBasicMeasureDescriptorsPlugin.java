@@ -20,6 +20,9 @@ package icy.plugins.kernel.roi.descriptor.measure;
 
 import fr.icy.extension.kernel.roi.descriptor.measure.*;
 import fr.icy.extension.plugin.abstract_.Plugin;
+import fr.icy.extension.plugin.annotation_.IcyPluginCategory;
+import fr.icy.extension.plugin.annotation_.IcyPluginName;
+import fr.icy.extension.plugin.annotation_.IcyPluginTags;
 import fr.icy.extension.plugin.interface_.PluginROIDescriptor;
 import fr.icy.model.roi.ROI;
 import fr.icy.model.roi.ROIDescriptor;
@@ -44,6 +47,9 @@ import java.util.Map;
  * @author Stephane Dallongeville
  * @author Thomas Musset
  */
+@IcyPluginName("ROI Basic Measure Descriptor")
+@IcyPluginCategory("ROI Descriptor")
+@IcyPluginTags({"ROI", "Basic Measure"})
 public class ROIBasicMeasureDescriptorsPlugin extends Plugin implements PluginROIDescriptor {
     public static final String ID_CONTOUR = ROIContourDescriptor.ID;
     public static final String ID_INTERIOR = ROIInteriorDescriptor.ID;

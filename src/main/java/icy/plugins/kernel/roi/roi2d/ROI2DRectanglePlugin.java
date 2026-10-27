@@ -35,6 +35,8 @@ import org.jetbrains.annotations.NotNull;
 @IcyPluginName("Rectangle")
 @IcyPluginIcon(value = "roi/rectangle", monochrome = true)
 @IcyROIPlugin(type = ROIType.ROI2D, nbPoints = ROIPoints.TWO)
+@IcyPluginCategory("ROI Tool")
+@IcyPluginTags({"ROI", "Rectangle", "2D"})
 public class ROI2DRectanglePlugin extends Plugin implements PluginROI {
     @Override
     public @NotNull String getROIClassName() {

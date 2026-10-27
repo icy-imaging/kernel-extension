@@ -19,7 +19,9 @@
 package icy.plugins.kernel.searchprovider;
 
 import fr.icy.extension.plugin.abstract_.Plugin;
+import fr.icy.extension.plugin.annotation_.IcyPluginCategory;
 import fr.icy.extension.plugin.annotation_.IcyPluginName;
+import fr.icy.extension.plugin.annotation_.IcyPluginTags;
 import fr.icy.extension.plugin.interface_.PluginSearchProvider;
 import fr.icy.network.search.SearchResultProducer;
 import fr.icy.extensions.kernel.searchproducer.OnlinePluginSearchResultProducer;
@@ -29,6 +31,8 @@ import fr.icy.extensions.kernel.searchproducer.OnlinePluginSearchResultProducer;
  * @author Thomas Musset
  */
 @IcyPluginName("Online Plugin Search Provider")
+@IcyPluginCategory("Search")
+@IcyPluginTags("Search")
 public class PluginOnlinePluginProvider extends Plugin implements PluginSearchProvider {
     @Override
     public Class<? extends SearchResultProducer> getSearchProviderClass() {
